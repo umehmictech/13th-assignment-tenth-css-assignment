@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    background-color: rgb(18, 18, 107);
+    padding: 10px;
+}
+
+.open {
+    display: flex;
+}
+
+header nav {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    color: rgb(190, 228, 190);
+    font-weight: bold;
+    font-size: 2rem;
+    position: static;
+}
+
+header nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    list-style: none;
+    position: relative;
+
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav .profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+header nav .profile img {
+    width: 100%;
+
+}
+
+header nav ul li ul {
+    background-color: rgb(3, 3, 31);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 220%;
+    top: 100%;
+}
+
+header nav ul li.first:hover>ul {
+    display: flex;
+}
+
+header nav ul li ul li {
+    position: relative;
+}
+
+header nav ul li ul li a {
+    width: 100%;
+    padding: 10px 20;
+    display: inline-block;
+}
+
+header nav ul li ul li a:hover {
+    background-color: rgb(150, 226, 36);
+}
+
+header nav ul li ul li ul {
+    background-color: rgb(3, 3, 31);
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+}
+
+header nav ul li.first ul li.second:hover>ul {
+    display: block;
+}
+
+header nav .hamburger {
+    display: none;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+header nav .hamburger span {
+    display: inline-block;
+    width: 90%;
+    height: 7px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+main {
+    background-color: rgb(233, 247, 240);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    padding: .5rem;
+    grid-template-areas:
+        "post feed-two suggestion"
+        "feed-one feed-two suggestion"
+        "feed-one feed-two suggestion"
+        "feed-one feed-three suggestion"
+    ;
+    height: 100%;
+
+}
+
+.container .post {
+    grid-area: post;
+    background-color: white;
+    padding: 35px;
+    margin-top: 20px;
+    height: 150px;
+    width: 100%;
+}
+
+.container .post .mind {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.container .post .mind .what {
+    background-color: blue;
+    color: white;
+    padding: 15px ;
+    margin-bottom: px;
+}
+
+.container .post:hover {
+    background-color: rgb(246, 248, 250);
+}
+
+.container .post .mind .what:hover {
+    background-color: blueviolet;
+    color: black;
+}
+
+.container .feed-one {
+    grid-area: feed-one;
+    background-color: white;
+    border-style: solid;
+    border-color: aliceblue;
+    padding: 35px;
+    margin-top: 20px;
+    height: auto;
+    overflow-y: scroll;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container .feed-oneplus {
+    max-width: 90%;
+    height: auto;
+
+}
+
+.feed-one .heada {
+
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.feed-one .heada p {
+    color: #666;
+
+}
+
+.feed-one .new img {
+    width: 100%;
+}
+
+.feed-one .love {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-one .love .adda {
+    color: white;
+    background-color: blue;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+
+.container .feed-one:hover {
+    background-color: rgb(246, 248, 250);
+}
+
+.container .suggestion {
+    grid-area: suggestion;
+    background-color: white;
+    border-style: solid;
+    border-color: aliceblue;
+    box-shadow: azure;
+    padding: 20px;
+    margin-top: 15px;
+    height: auto;
+    overflow-y: scroll;
+    width: 100%;
+    color: rgb(91, 91, 241);
+}
+
+.suggestion .sugg .tab table td img {
+    border-radius: 50%;
+
+}
+
+.suggestion .sugg .tab table td a {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.suggestion .sugg .tab table td a:hover {
+    color: black;
+
+}
+
+.suggestion .sugg .sim table tr td img {
+    border-radius: 50%;
+}
+
+.suggestion .sugg .sim table tr td a {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.suggestion .sugg .sim table tr td a:hover {
+    color: black;
+}
+
+.suggestion .sugg .inflame table tr td a {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.suggestion .sugg .inflame table tr td a:hover {
+    background-color: black;
+}
+
+.suggestion .sugg .blow table tr td a {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.suggestion .sugg .blow table tr td a:hover {
+    background-color: black;
+}
+
+.suggestion .sugg .mytech table tr td a {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.suggestion .sugg .mytech table tr td a:hover {
+    background-color: black;
+}
+
+.suggestion .sugg .remode table tr td a {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.suggestion .sugg .remode table tr td a:hover {
+    background-color: black;
+}
+
+.suggestion .sugg .see {
+    background-color: blue;
+    text-align: center;
+    padding: 20px 15px;
+    color: white;
+}
+
+.suggestion .sugg .see:hover {
+    color: black;
+}
+
+.container .suggestion:hover {
+    background-color: rgb(246, 248, 250);
+}
+
+.container .feed-two {
+    grid-area: feed-two;
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    height: auto;
+    /*overflow-y: scroll; */
+    width: 100%;
+}
+
+.feed-two .line-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed-two .line-two p {
+    color: #666;
+}
+
+.feed-two .pixel img {
+    width: 100%;
+}
+
+.feed-two .pix .ice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-two .pix .ice p {
+    background-color: blue;
+    color: white;
+    padding: 7px;
+    border-radius: 30%;
+}
+
+.feed-two .pix .ice i {
+    color: red;
+}
+
+.container .feed-two:hover {
+    background-color: rgb(246, 248, 250);
+}
+
+.container .feed-three {
+    grid-area: feed-three;
+    background-color: white;
+    border-style: solid;
+    border-color: aliceblue;
+    box-shadow: azure;
+    padding: 35px;
+    margin-top: 20px;
+    height: auto;
+    /*overflow-y: scroll; */
+    width: 100%;
+}
+
+.feed-three .author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.feed-three .author table tr th img {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.feed-three .author .hour {
+    color: #666;
+}
+
+.feed-three .author .emoji {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .feed-three:hover {
+    background-color: rgb(246, 248, 250);
+}
+
+@media screen and (max-width: 956px) {
+    header nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 804px) {
+    header nav ul {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1rem;
+        padding: .5rem;
+        grid-template-areas:
+            "post feed-two"
+            "feed-one feed-two"
+            "feed-one feed-two"
+            "feed-one feed-three"
+            "suggestion suggestion"
+        ;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header nav .profile {
+        display: none;
+    }
+
+
+    .container {
+
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1rem;
+        padding: .5rem;
+        grid-template-areas:
+            "post "
+            "feed-one"
+            "feed-two"
+            "feed-three"
+            "suggestion"
+        ;
+    }
+    
+}
